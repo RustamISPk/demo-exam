@@ -93,3 +93,5 @@ CREATE TABLE materials_for_product_maps
     FOREIGN KEY (material) REFERENCES product (id) ON DELETE CASCADE
 );
 
+ALTER TABLE customer ADD external_id varchar(10);
+
