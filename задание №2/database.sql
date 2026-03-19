@@ -93,5 +93,39 @@ CREATE TABLE materials_for_product_maps
     FOREIGN KEY (material) REFERENCES product (id) ON DELETE CASCADE
 );
 
-ALTER TABLE customer ADD external_id varchar(10);
+INSERT INTO product
+VALUES (0, 'Сметана классическая 15%', 80, '', 'НФ-00000006', 100);
+INSERT INTO product
+VALUES (1, 'Закваска сметанная', 10, '', 'НФ-00000004', 100);
+INSERT INTO product
+VALUES (2, 'Молоко нормализованное', 40, '', 'НФ-00000005', 100);
 
+ALTER TABLE characteristics_for_products
+    ADD value numeric(10, 3);
+
+INSERT INTO characteristics
+VALUES (0, 'масса в граммах', '');
+INSERT INTO characteristics_for_products
+VALUES (0, 0, 0, 100);
+INSERT INTO characteristics_for_products
+VALUES (1, 1, 0, 100);
+INSERT INTO characteristics_for_products
+VALUES (2, 2, 0, 100);
+
+INSERT INTO product_maps
+VALUES (0, 'Сметана классическая 15%', 0, 1);
+INSERT INTO materials_for_product_maps
+VALUES (0, 0, 1, 900);
+INSERT INTO materials_for_product_maps
+VALUES (1, 0, 2, 70);
+
+INSERT INTO role
+VALUES (0, 'Менеджер по продажам', '');
+INSERT INTO employers
+VALUES (0, 'Тестов', 'Тест', 'Тестович', 0);
+
+INSERT INTO orders
+VALUES (0, 1, 0, '2026-03-18');
+
+INSERT INTO products_for_order
+VALUES (0, 0, 0, 2);

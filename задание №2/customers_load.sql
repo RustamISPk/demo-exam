@@ -4,3 +4,6 @@ INSERT INTO customer VALUES (3, 'ООО Новый JDTO', '26320045111', 'г.Ж�
 INSERT INTO customer VALUES (4, 'ООО Ромашка', '4140784214', 'г. Омск, ул. Строителей, 294', '+79882584546', false, true, '000000003');
 INSERT INTO customer VALUES (5, 'ООО Ипподром', '5874045632', 'г. Уфа, ул. Набережная,  37', '+79627486389', true, true, '000000009');
 INSERT INTO customer VALUES (6, 'ООО Ассоль', '2629011278', 'г. Калуга, ул. Пушкина, 94', '+79184572398', false, true, '000000010');
+
+
+INSERT INTO product VALUES (0, 'Сметана классическая 15%', 80, '', '', 100);
